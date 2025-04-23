@@ -2,6 +2,8 @@
 
 This is my submission for the final assignment of the **Meta Back-End Developer Professional Certificate**.
 
+![Homepage](./homepage.png)
+
 ## 📚 About the Course
 
 Throughout the course, we learned to build modern web backend using:
@@ -24,22 +26,12 @@ The course covered concepts like:
 This is a fictitious Mediterranean restaurant located in **Chicago**.
 
 ### 🌟 Key Features:
-🔹 **User Registration & Login** (via Djoser & token auth)
-🔹 **Menu** with categorized dishes:
-  - Italian
-  - Greek
-  - Turkish
-🔹 **Booking System**: Make table reservations by date and time
-🔹 **Role-based Access**:
-  - Admins manage users
-  - Managers manage staff and orders
-  - Delivery crew update delivery status
-🔹 **MySQL Database Integration**
-🔹 **Admin Panel** for managing menu items, orders, categories, and staff groups
 
----
+- **User Registration & Login** (via Djoser & token auth)
+- **Menu** with categorized dishes:
+- **Booking System**: Make table reservations by date and time
+- **Role-based Access**: Admins, Managers, Delivery Crew and Customers
+- **MySQL Database Integration**
+- **Admin Panel** for managing menu items, orders, categories, and staff groups
 
-## 📷 Screenshot
-
-![Homepage](./homepage.png)
 
