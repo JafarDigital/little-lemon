@@ -1,31 +1,44 @@
-To test the API easily, follow these steps:
+# 🍋 Little Lemon Restaurant – Final Project (Meta Back-End Developer Course)
 
-Import the Postman test suite:
+This is my submission for the final assignment of the **Meta Back-End Developer Professional Certificate**.
 
-    -> Open Postman
-    -> click Import (top left)
-    -> choose Upload Files
-    -> select the littlelemon_api_tests.json file included
-    -> Click Import
+## 📚 About the Course
 
-In case you have to send up new environment in Postman: 
-   -> Navigate to "Environments" in left sidebar (or: top right corner)
-   -> Click + [i.e. add new environment]
-   -> Set an environment variable named "base_url" with values http://127.0.0.1:8000
-   -> Set an environment variable named "token" -- here you will assign the tokins from login
+Throughout the course, we learned to build modern web backend using:
 
-User "jafar" is admin and the password is "5"
-The passwords of all other users is "c12345678"
-User "bedouin" is manager
-User "bambini" should be delivery crew
+- **Django** – for powerful and scalable web application development
+- **Django REST Framework (DRF)** – for building RESTful APIs
+- **Djoser** – for handling authentication endpoints out of the box (login, signup, password reset, etc.)
 
-Since I couldn't manage to automatically assign tokens for postman test suite:
+The course covered concepts like:
+- Models and migrations
+- Viewsets, serializers, permissions
+- Token-based authentication
+- API testing and integration with tools like **Insomnia** and **Postman**
+- Connecting to **MySQL databases**
 
-  -> whenever you login to any user you should copy their token
-  -> then navigate to the environment
-  -> change variable token's current value to the token you copied
-  -> continue testing
+---
 
-I tested everything and it worked on my end, except I’m not sure if pagination is working as expected
+## 🍽️ Project Overview: Little Lemon Restaurant
 
-Apologies in advance if anything breaks!!
+This is a fictitious Mediterranean restaurant located in **Chicago**.
+
+### 🌟 Key Features:
+🔹 **User Registration & Login** (via Djoser & token auth)
+🔹 **Menu** with categorized dishes:
+  - Italian
+  - Greek
+  - Turkish
+🔹 **Booking System**: Make table reservations by date and time
+🔹 **Role-based Access**:
+  - Admins manage users
+  - Managers manage staff and orders
+  - Delivery crew update delivery status
+🔹 **MySQL Database Integration**
+🔹 **Admin Panel** for managing menu items, orders, categories, and staff groups
+
+---
+
+## 📷 Screenshot
+
+![Homepage](./homepage.png)
