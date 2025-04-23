@@ -1,5 +1,7 @@
 # from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 from .forms import BookingForm
 from .models import Menu
 from django.core import serializers
@@ -37,6 +39,9 @@ def menu(request):
     main_data = {"menu": menu_data}
     return render(request, 'menu.html', {"menu": main_data})
 
+def menu_view(request):
+    items = Menu.objects.all()
+    return render(request, 'menu.html', {'menu_items': items})
 
 def display_menu_item(request, pk=None): 
     if pk: 
@@ -45,6 +50,28 @@ def display_menu_item(request, pk=None):
         menu_item = "" 
     return render(request, 'menu_item.html', {"menu_item": menu_item})
 
+def login_view(request):
+    if request.method == "POST":
+        user = authenticate(
+            request,
+            username=request.POST['username'],
+            password=request.POST['password']
+        )
+        if user:
+            login(request, user)
+            return redirect('menu')  # or another page
+    return render(request, 'login.html')
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # Log the user in after signup
+            return redirect('menu')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
 
 @csrf_exempt
 def bookings(request):
