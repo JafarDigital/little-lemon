@@ -2,6 +2,8 @@
 
 This is my submission for the final assignment of the **Meta Back-End Developer Professional Certificate**.
 
+![Homepage](./homepage.png)
+
 ## 📚 About the Course
 
 Throughout the course, we learned to build modern web backend using:
@@ -36,10 +38,4 @@ This is a fictitious Mediterranean restaurant located in **Chicago**.
   - Delivery crew update delivery status
 🔹 **MySQL Database Integration**
 🔹 **Admin Panel** for managing menu items, orders, categories, and staff groups
-
----
-
-## 📷 Screenshot
-
-![Homepage](./homepage.png)
 
