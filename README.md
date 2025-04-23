@@ -27,10 +27,10 @@ This is a fictitious Mediterranean restaurant located in **Chicago**.
 
 ### 🌟 Key Features:
 
-- 🔹 **User Registration & Login** (via Djoser & token auth)
-- 🔹 **Menu** with categorized dishes:
-- 🔹 **Booking System**: Make table reservations by date and time
-- 🔹 **Role-based Access**: Admins, Managers, Delivery Crew and Customers
-- 🔹 **MySQL Database Integration**
-- 🔹 **Admin Panel** for managing menu items, orders, categories, and staff groups
+- **User Registration & Login** (via Djoser & token auth)
+- **Menu** with categorized dishes:
+- **Booking System**: Make table reservations by date and time
+- **Role-based Access**: Admins, Managers, Delivery Crew and Customers
+- **MySQL Database Integration**
+- **Admin Panel** for managing menu items, orders, categories, and staff groups
 
