@@ -26,6 +26,7 @@ The course covered concepts like:
 This is a fictitious Mediterranean restaurant located in **Chicago**.
 
 ### 🌟 Key Features:
+
 🔹 **User Registration & Login** (via Djoser & token auth)
 🔹 **Menu** with categorized dishes:
 🔹 **Booking System**: Make table reservations by date and time
