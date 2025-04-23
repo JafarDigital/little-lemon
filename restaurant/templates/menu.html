@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
-{% if user.is_authenticated %}
-    <h2>Welcome back, {{ user.username }}!</h2>
-  {% endif %}
-<h1>Menu</h1>
-<!--Begin col-->
-<div class="column">
-    {% for item in menu_items %}
-    <p>
-      <a href="{% url 'menu_item' pk=item.pk %}">{{ item.name }}</a>
-      <span class="menu-price">${{ item.price }}.00</span>
-    </p>
-    {% endfor %}
-</div>
-<!--End col-->
+  <h1>Menu</h1>
+
+  {% for category, items in categorized_menu %}
+    <h2>{{ category.title }}</h2>
+    <ul>
+      {% for item in items %}
+        <li>
+          <strong><a href="{% url 'menu_item_detail' item.id %}">{{ item.title }}</a></strong> – ${{ item.price }}<br>
+          <em>{{ item.featured|yesno:"⭐️ Featured," }}</em><br>
+          {{ item.description|default:"No description." }}
+        </li><br>
+      {% endfor %}
+    </ul>
+  {% empty %}
+    <p>No categories or items available.</p>
+  {% endfor %}
 {% endblock %}
